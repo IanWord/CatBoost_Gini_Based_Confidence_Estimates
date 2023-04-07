@@ -2,7 +2,7 @@
 A method to deduce important decision rules from the CatBoost model architecture
 
 Dataset and classification task:
-University of Southern Denmark, 2023 Exam collaboration with Udvikling og Forenklingsstyrelsen (UFST). Classification task to catch Tax Fraudulent businesses in Denmark. 240 features, 2 classes. "Not tax fraudulent"=0, "Tax fraudulent"=1. Data is anonymized in accordance with GDPR. I am not allowed to describe the meaning or the definitions of the variable names. Variable names are anonymized, and so is the variable values. 
+University of Southern Denmark, 2023 Exam collaboration with Udvikling og Forenklingsstyrelsen (UFST). Classification task to catch Tax Fraudulent businesses in Denmark. 240 features, 2 classes. "Not tax fraudulent"=0, "Tax fraudulent"=1. Data is anonymized in accordance with GDPR. I am not allowed to describe the meaning or the definitions of the variable names. Variable names are anonymized, and so is the variable values. Any data preparation in this repositary, is based solely on a statistical basis, not an industry one. 
 
 Can we consider the model competent in its ability to evaluate what is truly important for the task? 
 The danger with feature based importances, SHAP values and so forth is that we implicitly expect the model to be competent. If we consider the initial classification results (see the ipynb file) we would hesitate to answer yes. It clearly does a good job predicting not fraudulent, but not so much for the fraudulent. 
