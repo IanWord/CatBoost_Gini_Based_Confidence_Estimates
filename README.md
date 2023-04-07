@@ -1,6 +1,9 @@
 # CatBoost_Gini_Based_Confidence_Estimates
 A method to deduce important decision rules from the CatBoost model architecture
 
+Dataset and classification task:
+University of Southern Denmark, 2023 Exam collaboration with Udvikling og Forenklingsstyrelsen (UFST). Classification task to catch Tax Fraudulent businesses in Denmark. 240 features, 2 classes. "Not tax fraudulent"=0, "Tax fraudulent"=1. Data is anonymized in accordance with GDPR. I am not allowed to describe the meaning or the definitions of the variable names. Variable names are anonymized, and so is the variable values. 
+
 Can we consider the model competent in its ability to evaluate what is truly important for the task? 
 The danger with feature based importances, SHAP values and so forth is that we implicitly expect the model to be competent. If we consider the initial classification results (see the ipynb file) we would hesitate to answer yes. It clearly does a good job predicting not fraudulent, but not so much for the fraudulent. 
 But even if the model was extremely talented, I would still hesitate to call it "competent". Consider for a minute the thousands or even millions of models, of which many have tried to be implemented, but eventually failed. A great deal of those models certainly had SOTA performance, but once applied to the real world, it falls apart. Concept drift, distribution shift etc. The world is tough. Hence, it is only a small fraction of models we can truly call competent, hence, we can only conclude competency when a model is in production, and it is performing well. It is a statistical improbability that the model is competent, therefore, we can not rely on feature based importance scores alone, even SHAP values, to decide whether a feature is important or not.  
